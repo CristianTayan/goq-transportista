@@ -1,0 +1,52 @@
+page-login {
+
+      .transparencia {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        background: #6a3093; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #6a3093, #a044ff); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #6a3093, #a044ff);
+        color: #f1f1f1;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+      }
+      h1 {
+        letter-spacing: 2px;
+      }
+      h6 {
+        color: #dd961c;
+      }
+    
+      .ion-card {
+        background-color: #fff;
+        border: 1px solid #f1eee9;
+        margin: 40px auto;
+        border-radius: 10px !important;
+      }
+    
+      .ion_input {
+        color: #212121;
+        opacity: 0.6;
+      }
+      .ion_icon {
+        
+        font-size: 5px;
+      }
+      .home_back {
+        background-color: #15161d;
+      }
+      .item-inner,
+      ion-item {
+        border-bottom-color: transparent !important;
+        box-shadow: none !important;
+      }
+      .formulario {
+        background-color: transparent !important;
+        padding: 20px 10px 20px 10px;
+        // border-radius: 15px;
+        // box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+      }
+}

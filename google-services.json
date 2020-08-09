@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "890129280723",
+    "firebase_url": "https://goq-chefs.firebaseio.com",
+    "project_id": "goq-chefs",
+    "storage_bucket": "goq-chefs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890129280723:android:106b5c6ade2f29796e2e26",
+        "android_client_info": {
+          "package_name": "com.goq.proveedores"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890129280723-n853i87vgt260ubj1tddjlp4lvrh1fe4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBksj_6p0maXFHVO9WYxGMAvFPbpUiF2TU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890129280723-n853i87vgt260ubj1tddjlp4lvrh1fe4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890129280723:android:2b7b1d19872c64ed6e2e26",
+        "android_client_info": {
+          "package_name": "com.goq.shopper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890129280723-n853i87vgt260ubj1tddjlp4lvrh1fe4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBksj_6p0maXFHVO9WYxGMAvFPbpUiF2TU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890129280723-n853i87vgt260ubj1tddjlp4lvrh1fe4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

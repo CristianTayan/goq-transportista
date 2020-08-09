@@ -1,0 +1,36 @@
+page-historial {
+    ion-icon {
+        color: #443c14;
+      }
+    .item-md h2{
+        color: #212121;
+        margin: 0px;
+        padding: 0px;
+        font-weight: 700;
+    }
+
+    .item-md p{
+        color: #757575;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .item-md h1{
+        color: #443c14;
+    }
+
+    .item.item-trns {
+        margin: 0px;
+        border-color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+        color: white; 
+    }
+    .searchbar-input {
+        background: efe7cb !important;
+        border-radius: 12px !important;
+        height: 45px !important;
+        max-width: 400px;
+        font-size: 1.25em !important;
+        border: 1px solid transparent;
+    }
+}

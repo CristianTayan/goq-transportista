@@ -1,0 +1,13 @@
+<ion-tabs mode="md">
+  <!-- <ion-tab tabIcon="ios-home" tabTitle="Inicio" [root]="inicio" ></ion-tab> -->
+  <ion-tab tabIcon="md-notifications" tabTitle="Ordenes" [root]="pedidos" ></ion-tab>
+  <!-- <ion-tab tabIcon="notifications" tabTitle="Pedidos atendidos" [root]="pedidos_atendidos" ></ion-tab> -->
+  <ion-tab  [root]="mapa" ></ion-tab>
+  <ion-tab tabIcon="md-bookmarks" tabTitle="Historial" [root]="predidos_atendidos" ></ion-tab>
+  <!-- <ion-tab tabIcon="cart" tabTitle="Productos" [root]="productos" ></ion-tab> -->
+  <ion-fab bottom center >
+    <button ion-fab (click)="abrir_mapa()" ><ion-icon name="md-map" ></ion-icon></button>
+    
+  </ion-fab>
+  
+</ion-tabs>

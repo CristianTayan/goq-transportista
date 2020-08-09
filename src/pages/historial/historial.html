@@ -1,0 +1,38 @@
+<ion-header >
+  <ion-navbar color="nabvar">
+    <ion-title>
+      Tus entregas
+    </ion-title>
+  </ion-navbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-searchbar  placeholder="Buscar por fecha"></ion-searchbar>
+    <ion-list-header>
+      PEDIDOS ATENDIDOS
+    </ion-list-header>
+    <ion-card *ngFor="let item of pedidos" style="border-radius: 10px;">
+      <ion-item class="item item-trns" style="border-left:4px solid #D1C4E9;">
+        <h2>Desde: {{ item.NOMBRE_EMPRESA | uppercase}}</h2>
+        <p>{{ item.DIRECCION_EMPRESA }}</p>
+        <h1 item-end>$ {{ item.SUBTOTAL}}</h1>
+      </ion-item>
+      <ion-item class="item item-trns" style="border-left:4px solid #b3b512;">
+        <h2>Hasta: </h2>
+        <h6 item-end>+ ${{ item.COSTO_ENVIO}}</h6>
+        <p>{{ item.DIRECCION }}</p>
+      </ion-item>
+      <ion-row>
+        <ion-col col-6>
+          <button ion-button block round sm color="accent" style="text-transform: none;" disabled>{{ item.FECHA_ENTREGA }}</button>
+        </ion-col>
+        <ion-col col-6>
+          <button ion-button block outline round sm color="primarydark" style="text-transform: none;"
+            (click)="ver_detalles(item.NROPEDIDO, item.IDUSUARIO, item.SUBTOTAL, item.COSTO_ENVIO, item.ESTADO)">Detalles</button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <div *ngIf="!pedidos" style="position: absolute; top: 30%; text-align: center; width: 100%;">
+      <img src="assets/imgs/Lol_exclam.png" alt="" style="width: 200px; opacity: 0.5;">
+    </div>
+  </ion-content>

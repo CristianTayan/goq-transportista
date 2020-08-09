@@ -1,0 +1,26 @@
+page-pedidos {
+    
+    .item-md h2{
+        color: #333;
+        margin: 0px;
+        padding: 0px;
+        font-weight: 700;
+    }
+
+    .item-md p{
+        color: #888;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .item-md h1{
+        color: #888;
+    }
+
+    .item.item-trns {
+        margin: 0px;
+        border-color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+        color: white; 
+    }
+}

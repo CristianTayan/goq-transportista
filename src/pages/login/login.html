@@ -1,0 +1,44 @@
+<!-- -->
+
+
+
+<ion-content padding style="position: relative; background: url('assets/imgs/fondo_goq.jpg') no-repeat center center fixed; background-size: cover;">
+  <br>
+  <div padding style="text-align: center;">
+    <img src="assets/imgs/logo.png" alt="" style="width: 100px;">
+    
+  </div>
+  <br>
+  <div class="formulario" style="padding: 0px 30px;">
+    <div style="text-align: center;">
+      <!-- <img src="assets/imgs/Marca-KIPI-logo-sup.png" alt="" style="width: 300px;"> -->
+      <h1 style="color: #fff;">Bienvenido repartidor,</h1>
+      <h6 style="color: #fff;">Inicia sesión para continuar</h6>
+    </div>
+    <form [formGroup]="myForm" (ngSubmit)="login()" novalidate>
+      <ion-list>
+
+        <ion-item class="ion-card">
+          <ion-input type="text" placeholder="Nombre de usuario" formControlName="cedula" [(ngModel)]="cedula"
+            class="ion_input" name="cedula"></ion-input>
+          <ion-icon name="person" class="ion_icon" item-left small></ion-icon>
+        </ion-item>
+
+        <ion-item class="ion-card">
+          <ion-input type="password" formControlName="acceso" [(ngModel)]="acceso" class="ion_input"
+            placeholder="Contraseña" name="acceso"></ion-input>
+          <ion-icon name="finger-print" class="ion_icon" item-left small></ion-icon>
+        </ion-item>
+      </ion-list>
+      <div>
+        <button ion-button block round large color="primary"
+          style="font-weight: 300; text-transform: none;  background-size: cover;"
+          type="submit" >Ingresar</button>
+      </div>
+      <br>
+      <!-- <div style="width:96%; text-align: center;">
+        <h6 style="color: #fff;" (tap)="registro()">Usuario nuevo? <strong style="color: #b4b0b0;"> Registrate</strong></h6>
+      </div> -->
+    </form>
+  </div>
+</ion-content>

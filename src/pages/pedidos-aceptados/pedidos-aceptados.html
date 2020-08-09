@@ -1,0 +1,43 @@
+<ion-header >
+  <ion-navbar color="nabvar">
+    <button ion-button menuToggle
+      style="background-color: #e5cc7b; opacity: 0.9; width: 48px; height: 48px; border-radius: 50%;position: relative;">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Historial de entregas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content style="position: relative;">
+  <ion-list-header style="text-align: center;"> 
+    <strong>Total de entregas: {{total_pedidos}} entregas</strong>
+  </ion-list-header>
+  <ion-card *ngFor="let item of pedidos"  (click)="ver_detalles(item.idpedido, item.nropedido, item.idusuario, item.subtotal, item.costo_envio, item.estado, item.coordenadax, item.coordenaday)" style="border-radius: 8px;box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);">
+    <ion-item class="item item-trns" >
+      <h2>Desde: {{ item.desde }}</h2>
+      <p>{{ item.desde_direccion}}</p>
+      <h1 item-end>$ {{ item.subtotal}}</h1>
+    </ion-item>
+    <ion-item class="item item-trns" >
+      <h2>Hasta: </h2>
+      <h6 item-end>+ ${{ item.costo_envio}}</h6>
+      <ion-badge item-end *ngIf="item.estado == 'F'" color="danger"><strong>Entregado</strong></ion-badge>
+      <!-- <ion-badge item-end *ngIf="item.estado == 'C'" color="secondary"><strong>En proceso</strong></ion-badge> -->
+      <p>{{ item.hasta }}</p>
+      <p style="color: #c33232;"><strong>Finalizó el : {{item.dia}}</strong></p>
+    </ion-item>
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button block round sm *ngIf="item.estado == 'P'" color="primary" style="text-transform: none; " (click)="aceptar_pedido(item.idpedido)">ACEPTAR ENVÍO</button>
+        <!-- <button ion-button block round sm *ngIf="item.estado == 'C'" color="nabvar" style="text-transform: none;" (click)="aceptar_pedido(item.idpedido)" disabled>ACEPTAR ENVÍO</button> -->
+      </ion-col>
+
+    </ion-row>
+  </ion-card>
+  <div *ngIf="!pedidos" style="position: absolute; top: 30%; text-align: center; width: 100%;">
+    <img src="assets/imgs/Lol_exclam.png" alt="" style="width: 200px; opacity: 0.5;">
+  </div>
+</ion-content>

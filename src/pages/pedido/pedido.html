@@ -1,0 +1,81 @@
+<ion-header >
+  <ion-navbar color="nabvar">
+    <ion-title>
+      Pedido # {{ idpedido }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-list >
+    
+    <ion-item *ngFor="let item of usuario" no-lines>
+      <h2>Cliente: {{ item.NOMBRE }}</h2>
+      <button ion-fab mini color="nabvar" (click)="llamar_usuario(item.CELULAR)" item-end><ion-icon name="ios-call" ></ion-icon></button>
+      <!-- <button ion-fab mini color="accent" item-end><ion-icon name="logo-whatsapp"></ion-icon></button> -->
+      <p>{{ item.DIRECCION }}</p>
+      <p>{{ item.CELULAR }}</p>
+    </ion-item>
+    <ion-list-header no-lines style="padding: 0px;">
+      DETALLES DE LA ORDEN #{{ idpedido }}
+    </ion-list-header>
+    <ion-row style="border-bottom:  dotted;">
+      <ion-col col-8>
+        <h4 style="color: #888;">Productos</h4>
+      </ion-col>
+      <ion-col col-2>
+        <h6 style="color: #888;">Cant</h6>
+      </ion-col>
+      <ion-col col-2>
+        <h6 style="color: #888;">Costo</h6>
+      </ion-col>
+    </ion-row >
+    <br>
+    <ion-row *ngFor="let item of detalles" >
+      <ion-col col-2>
+        <img src="{{ item.foto }}" style=" width: 60px; height: 60px;object-fit: cover; border-radius: 4px;">
+      </ion-col>
+      <ion-col col-6>
+        <h6 style="color: #888; font-weight: 400;">{{ item.producto }}</h6>
+      </ion-col>
+      <ion-col col-1>
+        <h6 style="color: #888">{{ item.cantidad }}</h6>
+      </ion-col>
+      <ion-col col-3 style="text-align: right;">
+        <h6 style="color: #888">$ {{ item.total}}</h6>
+      </ion-col>
+    </ion-row ><br><br>
+    <ion-row style="border-top: dotted #888;">
+      <br>
+      <ion-col col-9 style="text-align: right;">
+        <br>
+        <h6 style="color: #888">Costo total</h6>
+      </ion-col>
+      <ion-col col-3 style="text-align: right;"> 
+        <br>
+        <h6 style="color: #888">$ {{ subtotal }}</h6>
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col col-9 style="text-align: right;">
+        <h6 style="color: #888">Costo de envío</h6>
+      </ion-col>
+      <ion-col col-3 style="text-align: right;"> 
+        <h6 style="color: #888">+ {{ costo_envio }}</h6>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+  <div padding>
+    <button *ngIf="estado == 'C'" ion-button block  style="text-transform: none;" round (click)="comenzar_recorrido()">Comenzar recorrido</button>
+    <!-- <button *ngIf="estado == 'F'" ion-button block color="accent" style="text-transform: none;" large round (click)="comenzar_recorrido()" disabled>Comenzar recorrido</button> -->
+  </div>
+  
+</ion-content>
+<ion-footer color="nabvar">
+  <ion-item class="item item-trns" no-lines>
+    <h4 item-star>TOTAL</h4>
+    <h4 item-end>$ {{ total }}</h4>
+  </ion-item>
+</ion-footer>

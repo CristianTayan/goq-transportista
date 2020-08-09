@@ -1,0 +1,25 @@
+<ion-header >
+  <ion-navbar color="nabvar">
+    <ion-title>
+      Ruta pedido
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content>
+  <div id="mapa" style="position: relative;">
+  </div>
+  <!-- <ion-scroll scrollY="true" class="scroll">
+    <div padding-horizontal id="panel"></div>
+  </ion-scroll> -->
+  <div padding style="position: absolute; bottom: 5px; width: 100%;">
+    <button ion-button block large round color="secondary" (click)="finalizar_pedido()">Finalizar Pedido</button>
+  </div>
+  <ion-badge  style="position: absolute; top: 5%; left: 5px;">{{ distancia }} - Aprox: {{ duracion }} </ion-badge>
+  <!-- <ion-badge style="position: absolute; top: 15%; left: 5px;">{{ duracion }}</ion-badge> -->
+  <ion-fab top right>
+    <button ion-fab (click)="llamar_usuario()" color="secondary"><ion-icon name="ios-call" style="color: #fff;"></ion-icon></button>
+  </ion-fab>  
+</ion-content>
